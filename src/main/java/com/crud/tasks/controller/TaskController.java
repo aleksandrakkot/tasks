@@ -15,6 +15,7 @@ import org.springframework.web.servlet.HandlerMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/v1/tasks")
 @RequiredArgsConstructor
@@ -22,7 +23,6 @@ public class TaskController {
 
     private final DbService service;
     private final TaskMapper taskMapper;
-    private final HandlerMapping resourceHandlerMapping;
 
     @GetMapping
     public ResponseEntity<List<TaskDto>> getTasks() {
@@ -48,7 +48,7 @@ public class TaskController {
         return ResponseEntity.ok(taskMapper.mapToTaskDto(savedTask));
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> createTask(@RequestBody TaskDto taskDto) {
         Task task = taskMapper.mapToTask(taskDto);
         service.saveTask(task);
