@@ -24,13 +24,12 @@ Jest to prosta aplikacja CRUD (Create, Read, Update, Delete) do zarządzania zad
   **Metoda HTTP**: `DELETE`  
   **Endpoint**: `/v1/tasks/{id}`
 
-
-## Ekran początkowy
-![image](https://github.com/user-attachments/assets/6ae0e198-69d1-48d2-b934-10c408a096c0)
-
 ## Technologia
 
 - **Język programowania**: Java 17
 - **Framework**: Spring Boot 3.0
 - **Baza danych**: MySQL
 - **Biblioteki**: Lombok, Spring Data JPA, Hibernate
+
+## Ekran początkowy
+![image](https://github.com/user-attachments/assets/6ae0e198-69d1-48d2-b934-10c408a096c0)
