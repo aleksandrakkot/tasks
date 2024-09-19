@@ -22,7 +22,7 @@ class SimpleEmailServiceTest {
     @Mock
     private JavaMailSender javaMailSender;
 
-    @Test
+    /*@Test
     public void shouldSendEmailWithCc() {
         // Given
         Mail mail = new Mail("test@test.com", "Test", "Test Message", "CC@test.com"); // Użycie konstruktora
@@ -56,5 +56,5 @@ class SimpleEmailServiceTest {
 
         // Then
         verify(javaMailSender, times(1)).send(mailMessage);
-    }
+    }*/
 }

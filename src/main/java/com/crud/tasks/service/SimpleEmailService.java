@@ -34,11 +34,11 @@ public class SimpleEmailService {
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
-        Optional.ofNullable(mail.getToCc()).ifPresent(cc -> {
+        /*Optional.ofNullable(mail.getToCc()).ifPresent(cc -> {
             if (!cc.isEmpty()) {
                 mailMessage.setCc(cc);
             }
-        });
+        });*/
         return mailMessage;
     }
 }
