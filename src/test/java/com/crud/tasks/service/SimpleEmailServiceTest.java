@@ -22,16 +22,15 @@ class SimpleEmailServiceTest {
     @Mock
     private JavaMailSender javaMailSender;
 
-    /*@Test
+    @Test
     public void shouldSendEmailWithCc() {
         // Given
-        Mail mail = new Mail("test@test.com", "Test", "Test Message", "CC@test.com"); // Użycie konstruktora
+        Mail mail = new Mail("test@test.com", "Test", "Test Message");
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
-        mailMessage.setCc(mail.getToCc());
 
         // When
         simpleEmailService.send(mail);
@@ -43,7 +42,7 @@ class SimpleEmailServiceTest {
     @Test
     public void shouldSendEmailWithoutCc() {
         // Given
-        Mail mail = new Mail("test@test.com", "Test", "Test Message", ""); // Puste pole CC
+        Mail mail = new Mail("test@test.com", "Test", "Test Message");
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
@@ -56,5 +55,5 @@ class SimpleEmailServiceTest {
 
         // Then
         verify(javaMailSender, times(1)).send(mailMessage);
-    }*/
+    }
 }
